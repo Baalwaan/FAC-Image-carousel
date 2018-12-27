@@ -1,2 +1,2 @@
 # FAC-image-carousel
-Image Carousal Task
+https://baalwaan.github.io/FAC-image-carousel/
