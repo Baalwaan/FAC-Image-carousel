@@ -14,7 +14,7 @@ body{
   	display: flex;
 	justify-content: space-around;
 	/*border: solid red;*/
-	user-select: none;
+	/*user-select: none;*/
 
 }
 
@@ -84,7 +84,8 @@ body{
 	font-weight: bolder;
 	text-align: center;
 	color: white;
-	border-radius:10%;	
+	border-radius:10%;
+  user-select: none;	
 	}
 
 .arrow:active{
