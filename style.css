@@ -1,0 +1,171 @@
+body{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+	position: fixed;
+}
+
+/*carousal container which has the arrows and images in it*/
+.container{
+	position: relative;
+  	width: 100vw;
+  	height:80vh;   
+  	display: flex;
+	justify-content: space-around;
+	/*border: solid red;*/
+	user-select: none;
+
+}
+
+.container #wrap{
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  border:  ridge white;
+}
+
+.container #wrap .images{
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  /* display none (below) hides the slides and then through javascript startSlide() will display first slide upon load*/
+  display: none;
+  }
+
+
+.container #wrap .image-content{
+	position: relative;	
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%); 
+ 	background: rgba(46, 49, 49, 0.6);
+	font-size: 3vh;
+	font-weight: bolder;
+	color: white;
+}
+
+
+/*Slide images and thumbnail images*/
+  .container #wrap .image1, #thumbnail-holder .image1{
+  	background-image: url("image1.jpg");
+  	background-repeat: cover;
+  	background-size:100% 100%;
+  }
+ .container #wrap .image2, #thumbnail-holder .image2{
+  	background-image: url(image2.jpeg);
+  	background-repeat: cover;
+  	background-size:100% 100%;
+  }
+
+
+ .container #wrap .image3, #thumbnail-holder .image3{
+  	background-image: url(image3.jpg);
+  	background-repeat: cover;
+  	background-size:100% 100%;
+  }
+
+ .container #wrap .image4, #thumbnail-holder .image4 {
+  	background-image: url(image4.jpeg);
+  	background-repeat: cover;
+  	background-size:100% 100%;
+  }
+
+
+/*arrows*/
+.arrow{
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	border: solid white;
+	padding: 2%;
+	font-size:10vh;	
+	font-weight: bolder;
+	text-align: center;
+	color: white;
+	border-radius:10%;	
+	}
+
+.arrow:active{
+  	transform: scale(0.8);
+  	transition: 1s ease-out;
+}
+.container .arrow:hover{
+	background-color: white;
+	color: black;
+
+}
+
+/*left arrow*/
+.container #left-arrow {
+	left: -1.5% ;
+}	
+
+/*right arrow*/
+.container #right-arrow{
+	right: -1.5% ;
+}
+
+/*Thumbnail holder bottom of screen*/
+
+#thumbnail-holder{
+	width: 70vw;
+  	height:15vh;  
+  	margin: 5vh auto;
+  	display: flex;
+  	justify-content: space-around;
+    /*border: solid green;*/
+
+}
+
+/*thumbnails*/
+#thumbnail-holder .thumbnails{
+	cursor: pointer;
+	width: 24%;
+	height: 100%;	
+	opacity: 0.3;
+	/*border: solid black;*/
+}
+
+/*thumbnail that is showing on carousal will not have opacity, to indicate to user that this is the image showing on screen*/
+
+#thumbnail-holder .selected{	
+	opacity:1;
+}
+
+
+/*Fade effect for images*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+
+/*removing arrows from screen. User will use thumbnails to toggle through carousal. JS will also alert user to use thumnails for toggling */
+@media screen and (max-width: 400px){
+.arrow{
+	display: none;
+}
+.container #wrap{
+	position: absolute;
+	width: 100%;
+	margin:0;
+}
+#thumbnail-holder{
+	width: 100%;
+}
+
+
