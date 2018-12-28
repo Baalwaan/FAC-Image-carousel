@@ -27,18 +27,23 @@ body{
 }
 
 
-.play-pause{
+/*Carousel play/pause button*/
+#play-pause{
   position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   background-color: black;
   color: white;
-  z-index: 200;
   padding: 5px 10px 5px 10px;
   text-align: center;
+  border: solid white;
   border-radius: 10%;
-    top: 75%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-weight: bolder;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+    z-index: 200;
+  user-select: none;
 }
 
 .container #wrap .images{
@@ -107,7 +112,7 @@ body{
   	transform: scale(0.8);
   	transition: 1s ease-out;
 }
-.container .arrow:hover, .play-pause:hover{
+.container .arrow:hover, #play-pause:hover{
 	background-color: white;
 	color: black;
 

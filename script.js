@@ -64,7 +64,7 @@ reset()
 
 
 if (screen.width < 400) {
-	alert("Please use thumbnail to toggle through carousal");
+	alert("Please use thumbnails to toggle through carousal");
     // auto();
 }
 
@@ -74,7 +74,7 @@ var checkKey = function(e) {
     e = e || window.event;
 
     if(e.keyCode == '37' ) {
-       // left arrowa
+       // left arrow
   return leftClick();
     }
     else if (e.keyCode == '39') {
@@ -89,15 +89,12 @@ document.addEventListener('keydown', checkKey);
 leftArrow.addEventListener('click', leftClick);
 rightArrow.addEventListener('click', rightClick);
 
-
-
-
 // giving thumbnails underneath images ability to listen for click
 var addEvent = function(index){
 	thumbNailButtons[index].addEventListener('click', function(){
 	reset();
 	thumbNailButtons[index].classList.add('selected');
-	images[index].style.display = 'block';;
+	images[index].style.display = 'block';
 	count=index;});
 }
 
@@ -105,3 +102,29 @@ var addEvent = function(index){
 thumbNailButtons.forEach(function(slideButton){
     addEvent(thumbNailButtons.indexOf(slideButton));
 });
+
+// Carousel button function
+
+var playPause = document.getElementById('play-pause');
+
+var play = true;
+
+var autoPlay = function(){
+
+	if(play === true){
+		play = false;
+		carouselPlay = setInterval(rightClick, 3000);
+		document.getElementById('play-pause').innerHTML = 'Pause Me';
+	}
+
+	else{
+		play = true;
+		clearInterval(carouselPlay);
+		document.getElementById('play-pause').innerHTML = 'Play Me';
+	}
+
+}
+
+playPause.addEventListener('click', autoPlay);
+
+window.onload = autoPlay;
