@@ -7,13 +7,13 @@ let count = 0;
 let images = document.querySelectorAll('.images'); 
 
  //Thumbnials  underneath slidecontainer turned into a real array
-var thumbNailButtons = Array.prototype.slice.call( document.getElementById('thumbnail-holder').children );
+let thumbNailButtons = Array.prototype.slice.call( document.getElementById('thumbnail-holder').children );
 
 
 
 /*this function will be used on each function to wipe our image wrapper clean before displaying next image
 and also remove class 'selected' which gives it an opacity of .4 again from the thumbnail button that is being viewed*/
-var reset = function(){
+let reset = function(){
 	for(let i = 0; i < images.length; i++){
 		images[i].style.display = 'none';
 		thumbNailButtons[i].classList.remove('selected');
@@ -22,15 +22,15 @@ var reset = function(){
 
 
 // When page is loaded it will give the first thumbnail no opacity to indicate that this is the image user is now viewing
-var initThumbnail = function(){
-	var thumbnailButton =  document.querySelector('.thumbnails')
+let initThumbnail = function(){
+	let thumbnailButton =  document.querySelector('.thumbnails')
 	thumbnailButton.classList.add('selected');
 }
 
 
 // Shows first image and gives the first thumbnail no opacity to indicate image being viewed to user 
 
-var startCarousal = function(){
+let startCarousal = function(){
 	reset();
 	images[0].style.display = 'block';
 	initThumbnail();
@@ -69,7 +69,7 @@ if (screen.width < 400) {
 }
 
 //keypad functionality for left', 'right'
-var checkKey = function(e) {
+let checkKey = function(e) {
 
     e = e || window.event;
 
@@ -90,7 +90,7 @@ leftArrow.addEventListener('click', leftClick);
 rightArrow.addEventListener('click', rightClick);
 
 // giving thumbnails underneath images ability to listen for click
-var addEvent = function(index){
+let addEvent = function(index){
 	thumbNailButtons[index].addEventListener('click', function(){
 	reset();
 	thumbNailButtons[index].classList.add('selected');
@@ -105,11 +105,11 @@ thumbNailButtons.forEach(function(slideButton){
 
 // Carousel button function
 
-var playPause = document.getElementById('play-pause');
+let playPause = document.getElementById('play-pause');
 
-var play = true;
+let play = true;
 
-var autoPlay = function(){
+let autoPlay = function(){
 
 	if(play === true){
 		play = false;
