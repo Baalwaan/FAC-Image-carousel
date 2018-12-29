@@ -1,4 +1,4 @@
-// Arrows
+ // Arrows
 let leftArrow = document.getElementById('left-arrow');
 let rightArrow = document.getElementById('right-arrow');
 // will use counter to keep track of what image to show next/previous
@@ -79,7 +79,12 @@ let checkKey = function(e) {
     }
     else if (e.keyCode == '39') {
        // right arrow
-       return rightClick();
+       rightClick();
+    }
+
+    else if (e.keyCode == '32') {
+    	//space bar for play/pause carousel
+    	autoPlay();
     }
 }
 
