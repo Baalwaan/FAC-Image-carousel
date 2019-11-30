@@ -1,77 +1,72 @@
 <!DOCTYPE html>
 <html lang="EN">
-<head>
-	<title>Image Carousal</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-</head>
-<body>
+  <head>
+    <title>Image Carousal - GA</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Arrow -->
+      <div id="left-arrow" class="arrow" title="Previous"><</div>
 
-<div class="container">
-<!-- Left Arrow -->
-	<div id="left-arrow" class="arrow" title="Previous"><</div>
+      <div id="wrap">
+        <!-- Image wrapper -->
 
-	
+        <div id="play-pause" class="fade" title="Play/Pause Button">
+          <!-- using JS to give it text -->
+        </div>
 
-	<div id="wrap"><!-- Image wrapper -->
-		
-<div id="play-pause" class="fade" title="Play/Pause Button"><!-- using JS to give it text --></div>
+        <!-- Image one -->
+        <div class="images fade image1">
+          <div class="image-content">
+            <h1>Image one</h1>
+            <h5>Carousal Made By: Burhan Baalwaan</h5>
+            <h6>Images From: Pexel.com</h6>
+          </div>
+        </div>
 
-<!-- Image one -->
-		<div class="images fade image1">
-			<div class="image-content">	
-				<h1>Image one</h1>
-				<h5>Carousal Made By: Burhan Baalwaan</h5>
-				<h6>Images From: Pexel.com </h6>
-			</div>
-		</div>
+        <!-- Image two -->
+        <div class="images fade image2">
+          <div class="image-content">
+            <h1>Image Two</h1>
+            <h5>Carousal Made By: Burhan Baalwaan</h5>
+            <h6>Images From: Pexel.com</h6>
+          </div>
+        </div>
 
-<!-- Image two -->
-		<div class="images fade image2">
-			<div class="image-content">	
-				<h1>Image Two</h1>
-				<h5>Carousal Made By: Burhan Baalwaan</h5>
-				<h6>Images From: Pexel.com </h6>
-			</div>
-		</div>
+        <!-- Image 3 -->
+        <div class="images fade image3">
+          <div class="image-content">
+            <h1>Image Three</h1>
+            <h5>Carousal Made By: Burhan Baalwaan</h5>
+            <h6>Images From: Pexel.com</h6>
+          </div>
+        </div>
 
-<!-- Image 3 -->
-		<div class="images fade image3">
-			<div class="image-content">	
-				<h1>Image Three</h1>
-				<h5>Carousal Made By: Burhan Baalwaan</h5>
-				<h6>Images From: Pexel.com </h6>
-			</div>
-		</div>
+        <!-- Image 4 -->
+        <div class="images fade image4">
+          <div class="image-content">
+            <h1>Image Four</h1>
+            <h5>Carousal Made By: Burhan Baalwaan</h5>
+            <h6>Images From: Pexel.com</h6>
+          </div>
+        </div>
+      </div>
 
-<!-- Image 4 -->
-		<div class="images fade image4">
-			<div class="image-content">	
-				<h1>Image Four</h1>
-				<h5>Carousal Made By: Burhan Baalwaan</h5>
-				<h6>Images From: Pexel.com </h6>
-			</div>
-		</div>
-	</div>
+      <!-- Right Arrow -->
+      <div id="right-arrow" class="arrow" title="Next">></div>
+    </div>
 
-<!-- Right Arrow -->
-	<div id="right-arrow" class="arrow" title="Next">></div>
+    <!-- Image Thumbnail button holder bottom of page.  -->
+    <div id="thumbnail-holder">
+      <div class="thumbnails image1" title="Image One"></div>
+      <div class="thumbnails image2" title="Image Two"></div>
+      <div class="thumbnails image3" title="Image Three"></div>
+      <div class="thumbnails image4" title="Image Four"></div>
+    </div>
 
-</div>
-
-<!-- Image Thumbnail button holder bottom of page.  -->
-<div id="thumbnail-holder">
-	<div class="thumbnails image1" title="Image One"></div>
-	<div class="thumbnails image2" title="Image Two"></div>
-	<div class="thumbnails image3" title="Image Three"></div>
-	<div class="thumbnails image4" title="Image Four"></div>
-</div>
-
-
-
-
-<script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
